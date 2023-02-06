@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
     double w = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.teal.shade300,
+      backgroundColor: Colors.white,
       body: Container(
         height: h,
         width: w,
@@ -43,9 +43,9 @@ class _HomePageState extends State<HomePage> {
               ],
               onChanged: (value) {
                 switch(value){
-                  case "Taximan" : Navigator.push(context, MaterialPageRoute(builder: (context) => TaximanLog(),));
+                  case "Taximan" : Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => TaximanLog(),));
                   break;
-                  case "Gestionnaire" : Navigator.push(context, MaterialPageRoute(builder: (context) => GestionnaireLog(),));
+                  case "Gestionnaire" : Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => GestionnaireLog(),));
                   break;
                 }
               },

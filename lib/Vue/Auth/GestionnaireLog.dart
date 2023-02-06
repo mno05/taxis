@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxis/Vue/Local/GestionnaireLocal.dart';
 import 'package:taxis/Vue/Widgets/ButtonC.dart';
 import 'package:taxis/Vue/Widgets/TextFieldC.dart';
 
@@ -55,7 +56,7 @@ class _GestionnaireLogState extends State<GestionnaireLog> {
                     text: "Se connecter",
                     onPressed: () {
                       if (_key.currentState!.validate()) {
-                        print("C bon");
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => GestionnaireLocale(),));
                       }
                     },
                   )
